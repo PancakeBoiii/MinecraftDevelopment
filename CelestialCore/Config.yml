@@ -1,0 +1,71 @@
+debug: 'false'
+
+plugin-prefix: '&6&lCelestialEngine&r'
+reload-message: '&aCelestialEngine has successfully reloaded!&r'
+#Messages
+WarningTitle: '§cWARNING!'
+WarningSubtitleOxygen: '§cNo Oxygen, put on gear or go near an oxygen emitter!'
+WarningSubtitleHot: '§4Too Hot! Put on thermal gear!'
+WarningSubtitleCold: '§9Too Cold! Put on thermal gear!'
+
+
+
+#SPACE GEAR
+helmet-type: "GLASS"
+#HOT THERMAL GEAR
+HOT_ThermalChestplateType: "NETHERITE_CHESTPLATE"
+HOT_ThermalLeggingsType: "NETHERITE_LEGGINGS"
+HOT_ThermalBootsType: "NETHERITE_BOOTS"
+#COLD THERMAL GEAR
+COLD_ThermalChestplateType: "LEATHER_CHESTPLATE"
+COLD_ThermalLeggingsType: "LEATHER_LEGGINGS"
+COLD_ThermalBootsType: "LEATHER_BOOTS"
+
+
+
+Planets:
+  world_moon:
+    CustomGravity: 'true'
+    WorldGravity: 2 #the gravity of the world, the higher the number the lower the gravity
+    Thermal: "NORMAL" # "NORMAL", "HOT" and "COLD" will set the planets thermal setting respectively
+    OxygenRadius: 6 #how far oxygen can reach you from an emitter
+    isHabitable: 'false' #do you need a helmet or oxygen
+    NonHabitableEffects:  #the effect(s) you get if you arent wearing oxygen gear
+    - "WITHER"
+    - "CONFUSION"
+    - "BLINDNESS"
+  world_mars:
+    CustomGravity: 'true'
+    WorldGravity: 1 #the gravity of the world, the higher the number the lower the gravity
+    Thermal: "HOT" # "NORMAL", "HOT" and "COLD" will set the planets thermal setting respectively
+    OxygenRadius: 10 #how far oxygen can reach you from an emitter
+    isHabitable: 'false' #do you need a helmet or oxygen
+    NonHabitableEffects:  #the effect(s) you get if you arent wearing oxygen gear
+    - "WITHER"
+    - "CONFUSION"
+    - "BLINDNESS"
+
+
+OxygenEmitters: # what blocks emit oxygen
+  - OAK_LEAVES
+  - SPRUCE_LEAVES
+  - JUNGLE_LEAVES
+  - DARK_OAK_LEAVES
+  - BIRCH_LEAVES
+  - ACACIA_LEAVES
+
+
+ThermalHotEffects: #the effect(s) you get if you aren't wearing Hot Thermal Gear on a Hot planet
+    - "WITHER"
+    - "CONFUSION"
+    - "BLINDNESS"
+    - "SLOW"
+    - "POISON"
+
+
+
+ThermalColdEffects: #the effect(s) you get if you aren't wearing Cold Thermal Gear on a cold planet
+    - "WITHER"
+    - "CONFUSION"
+    - "BLINDNESS"
+    - "SLOW"
