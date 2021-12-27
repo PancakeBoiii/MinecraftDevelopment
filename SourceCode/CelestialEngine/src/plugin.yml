@@ -1,0 +1,9 @@
+name: CelestialEngine
+version: 0.6
+api-version: 1.13
+author: PancakeBoiii
+main: io.GitHub.PancakeBoiii.CelestialEngine.Main
+depend: [PancakeCore]
+commands:
+  reload:
+    description: Reloads the config!

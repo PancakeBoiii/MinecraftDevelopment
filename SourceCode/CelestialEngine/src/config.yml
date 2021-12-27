@@ -1,0 +1,79 @@
+debug: false
+
+plugin-prefix: '&6&lCelestialEngine&r'
+reload-message: '&aCelestialEngine has successfully reloaded!&r'
+#Messages
+WarningTitle: '§cWARNING!'
+WarningSubtitleOxygen: '§cNo Oxygen, put on gear or go near an oxygen emitter!'
+WarningSubtitleHot: '§4Too Hot! Put on thermal gear!'
+WarningSubtitleCold: '§9Too Cold! Put on thermal gear!'
+
+
+
+#SPACE GEAR
+helmet-type: "GLASS"
+#HOT THERMAL GEAR
+HOT_ThermalChestplateType: "NETHERITE_CHESTPLATE"
+HOT_ThermalLeggingsType: "NETHERITE_LEGGINGS"
+HOT_ThermalBootsType: "NETHERITE_BOOTS"
+#COLD THERMAL GEAR
+COLD_ThermalChestplateType: "LEATHER_CHESTPLATE"
+COLD_ThermalLeggingsType: "LEATHER_LEGGINGS"
+COLD_ThermalBootsType: "LEATHER_BOOTS"
+
+
+Planets:
+  world_moon:
+    CustomGravity: true
+    WorldGravity: 2 #the gravity of the world, the higher the number the lower the gravity (This can be swapped out for the STATIC Gravity options)
+    Thermal: "NORMAL" # "NORMAL", "HOT" and "COLD" will set the planets thermal setting respectively
+    OxygenRadius: 6 #how far oxygen can reach you from an emitter
+    isHabitable: false #do you need a helmet or oxygen
+    NonHabitableEffects:  #the effect(s) you get if you arent wearing oxygen gear
+    - "WITHER"
+    - "CONFUSION"
+    - "BLINDNESS"
+  world_mars:
+    CustomGravity: true
+    StaticGravity: true # is the gravity settings manually set (This can be swapped out for the Dynamic Gravity options)
+    StaticJump: 1 #Manual jump boost value
+    StaticFall: 5 #Manual Slow Falling Value
+    Thermal: "HOT" #"NORMAL", "HOT" and "COLD" will set the planets thermal setting respectively
+    SafeUnderground: true #is it safe underground without gear when on a thermal planet
+    OxygenRadius: 10 #how far oxygen can reach you from an emitter
+    isHabitable: false #do you need a helmet or oxygen
+    NonHabitableEffects:  #the effect(s) you get if you arent wearing oxygen gear
+    - "WITHER"
+    - "CONFUSION"
+    - "BLINDNESS"
+    environment-immunity-list:  #the mobs that are immune to ALL the effects of the planet including oxygen
+    - "BLAZE"
+    - "HUSK"
+
+OxygenEmitters: # what blocks emit oxygen
+  - OAK_LEAVES
+  - SPRUCE_LEAVES
+  - JUNGLE_LEAVES
+  - DARK_OAK_LEAVES
+  - BIRCH_LEAVES
+  - ACACIA_LEAVES
+
+
+
+ThermalHotEffects: #the effect(s) you get if you aren't wearing Hot Thermal Gear on a Hot planet
+    - "WITHER"
+    - "CONFUSION"
+    - "BLINDNESS"
+    - "SLOW"
+    - "POISON"
+
+
+ThermalColdEffects: #the effect(s) you get if you aren't wearing Cold Thermal Gear on a cold planet
+    - "WITHER"
+    - "CONFUSION"
+    - "BLINDNESS"
+    - "SLOW"
+
+#EXPERIMENTAL
+MobsUseOxygenEmitters: false #ONLY USE IF YOUR PLANET WORLD DOESNT HAVE NATURALLY SPAWNING MOBS, CAUSES LAG WHEN TOO MANY ENTITIES
+MobsAffectedByTemperature: true #This needs to be set to false if MobsUseOxygenEmitters is set to true
