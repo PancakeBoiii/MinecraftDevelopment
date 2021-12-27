@@ -1,0 +1,24 @@
+debug: false
+
+plugin-prefix: '&2&lInTheWild&r'
+reload-message: '&9InTheWild has successfully reloaded!&r'
+
+
+Thirst: true
+Temperature: true
+Temperature-Neutral-Campfires: false
+
+Torch-Burnout: true
+Torch-Burnout-Time: 600 #seconds
+
+Soul-Torch-Burnout: true
+Soul-Torch-Burnout-Time: 1800 # seconds
+
+Campfire-Burnout: true
+Campfire-Burnout-Time: 900 # seconds
+
+Soul-Campfire-Burnout: true
+Soul-Campfire-Burnout-Time: 2100 # seconds
+
+TorchLocations: {}
+CampfireLocations: {}
